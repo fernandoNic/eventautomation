@@ -26,5 +26,11 @@ namespace Webhook.Controllers
             _kafkaService.publish(message);
             return Ok();
         }
+
+        [HttpGet(Name = "GetWelcomeMessage")]
+        public ActionResult GetMessage()
+        {
+            return Ok("hello world !!!");
+        }
     }
 }
